@@ -12,7 +12,8 @@ public class DotProductEditor : EditorWindow
     private SerializedProperty propP0;
     private SerializedProperty propP1;
     private SerializedProperty propC;
-
+    private GUIStyle guiStyle = new GUIStyle();
+    
     [MenuItem("Tools/Dot Product")]
     public static void ShowWindow()
     {
@@ -33,7 +34,11 @@ public class DotProductEditor : EditorWindow
         propP0 = obj.FindProperty("m_p0");
         propP1 = obj.FindProperty("m_p1");
         propC = obj.FindProperty("m_c");
-        
+
+        guiStyle.fontSize = 35;
+        guiStyle.fontStyle = FontStyle.Bold;
+        guiStyle.normal.textColor = Color.white;
+
         SceneView.duringSceneGui += SceneGUI;
         Debug.Log("Scene View - Open.");
     }
@@ -98,7 +103,26 @@ public class DotProductEditor : EditorWindow
             
             Debug.Log("Repainted.");
         }
-    }   
+        
+        DrawLabel(p0, p1, c);
+    }
+
+    void DrawLabel(Vector3 p0, Vector3 p1, Vector3 c)
+    {
+        Handles.Label(c, DotProduct(p0, p1, c).ToString("F1"), guiStyle);
+        Handles.color = Color.black;
+        
+        Handles.DrawAAPolyLine(3f, p0, c);
+        Handles.DrawAAPolyLine(3f, p1, c);
+    }
+
+    float DotProduct(Vector3 p0, Vector3 p1, Vector3 c)
+    {
+        Vector3 a = (p0 - c).normalized;
+        Vector3 b = (p1 - c).normalized;
+
+        return (a.x * b.x) + (a.y * b.y) * (a.z * b.z);
+    }
 
     /// <summary>
     /// Sets the Handles in 3D Space, based upon the Position provided.
