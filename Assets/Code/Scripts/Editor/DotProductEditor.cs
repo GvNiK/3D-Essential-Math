@@ -111,9 +111,38 @@ public class DotProductEditor : EditorWindow
     {
         Handles.Label(c, DotProduct(p0, p1, c).ToString("F1"), guiStyle);
         Handles.color = Color.black;
+
+        Vector3 cLef = WorldRotation(p0, c, new Vector3(0f, 1f, 0f));
+        Vector3 cRig = WorldRotation(p0, c, new Vector3(0f, -1f, 0f)); 
         
         Handles.DrawAAPolyLine(3f, p0, c);
         Handles.DrawAAPolyLine(3f, p1, c);
+        Handles.DrawAAPolyLine(3f, c, cLef);
+        Handles.DrawAAPolyLine(3f, c, cRig);
+    }
+    
+    /// <summary>
+    /// R = C + HP
+    /// H - corresponds to the Quaternion rotation of the angle resulting from calculating the arctangent 
+    /// of the direction of the vector « p0 – c »
+    /// </summary>
+    /// <param name="p"> </param>
+    /// <param name="c"> Refers to the vector we defined as the central point.</param>
+    /// <param name="pos"> A Vector with a magnitude equal to the distance between « C » and « P ».</param>
+    /// <returns></returns>
+    Vector3 WorldRotation(Vector3 p, Vector3 c, Vector3 pos)
+    {
+        // Getting the direction.
+        Vector2 dir = (p - c).normalized;
+        
+        // Getting the arctangent and converting it to angle in degrees.
+        float ang = MathF.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        
+        // Convert angle to quaternion.
+        // We use Z axis considering we have designed our tool in 2 Dimensional plane.
+        Quaternion rot = Quaternion.AngleAxis(ang, Vector3.forward);
+        
+        return c + rot * pos;
     }
 
     float DotProduct(Vector3 p0, Vector3 p1, Vector3 c)
@@ -123,7 +152,7 @@ public class DotProductEditor : EditorWindow
 
         return (a.x * b.x) + (a.y * b.y) * (a.z * b.z);
     }
-
+    
     /// <summary>
     /// Sets the Handles in 3D Space, based upon the Position provided.
     /// </summary>
