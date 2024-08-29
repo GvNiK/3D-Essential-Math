@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="987226f4-3726-4e11-9fb6-fe052c3330dc" name="Changes" comment="" />
+    <list default="true" id="987226f4-3726-4e11-9fb6-fe052c3330dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3D-Essential-Math/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D-Essential-Math/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +68,8 @@
       <updated>1723105317558</updated>
       <workItem from="1723105330930" duration="3220000" />
       <workItem from="1723193368275" duration="1829000" />
-      <workItem from="1724062355589" duration="1276000" />
+      <workItem from="1724062355589" duration="2380000" />
+      <workItem from="1724910401005" duration="6138000" />
     </task>
     <servers />
   </component>
