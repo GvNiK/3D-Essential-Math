@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="987226f4-3726-4e11-9fb6-fe052c3330dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/CameraShake.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/CameraShake.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3D-Essential-Math/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D-Essential-Math/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/DotProductDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/DotProductDemo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/DotProduct/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Scenes/Dot Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Scenes/Dot Example.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +76,7 @@
       <workItem from="1723193368275" duration="1829000" />
       <workItem from="1724062355589" duration="2380000" />
       <workItem from="1724910401005" duration="6138000" />
+      <workItem from="1724993548643" duration="7775000" />
     </task>
     <servers />
   </component>
@@ -79,6 +86,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
         if (health != null)
         {
             health.Damage(this.gameObject);
-            Destroy(this.gameObject, 5f);
+            Destroy(this.gameObject);
         }
     }
 }

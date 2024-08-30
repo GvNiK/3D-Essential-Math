@@ -5,8 +5,15 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private Material m_Material;
     [SerializeField] private float m_HitEffectDuration = 0.1f;
-    [SerializeField] private Camera m_Camera;
-    
+    [SerializeField] private CameraShake m_CameraShake;
+    [SerializeField] private float m_CmaeraShakeDuration = 0.25f;
+    // Q. Why the Tolerance?
+    // The dot product result is rarely exactly zero due to the way computers handle floating-point numbers,
+    // especially when the angle is close to perpendicular (90 degrees). Even though it looks like the enemy should be perfectly sideways,
+    // the calculation might return very small positive or negative values.
+    // This small margin of error accounts for floating-point precision issues and ensures that small values close to zero are considered zero for practical purposes.
+    [SerializeField] private float m_Tolerance = 0.001f; // Small value for tolerance
+
     private Color m_DefaultColor;
 
     private void Start()
@@ -32,14 +39,14 @@ public class Health : MonoBehaviour
             float dotProduct = Vector3.Dot(playerDirection, bulletDirection);
             
             // Determine enemy or bullet position relative to player
-            if (dotProduct > 0)
+            if (dotProduct > m_Tolerance)
             {
                 // Hit Front
                 StopCoroutine(PlayHitEffect(Color.cyan));
                 StartCoroutine(PlayHitEffect(Color.cyan));
                 Debug.Log("Hit at <color=cyan>Front</color>. DotProduct Value : " + "<color=green>" + dotProduct + "</color>");
             }
-            else if (dotProduct < 0)
+            else if (dotProduct < -m_Tolerance)
             {
                 // Hit Back
                 StopCoroutine(PlayHitEffect(Color.red));
@@ -61,9 +68,10 @@ public class Health : MonoBehaviour
         if (m_Material != null)
         {
             m_Material.color = hitEffectColor;
-            if (m_Camera != null)
+            if (m_CameraShake != null)
             {
-                
+                StopCoroutine(m_CameraShake.Shake(m_CmaeraShakeDuration, m_HitEffectDuration));
+                StartCoroutine(m_CameraShake.Shake(m_CmaeraShakeDuration, m_HitEffectDuration));
             }
             yield return new WaitForSeconds(m_HitEffectDuration);
 
