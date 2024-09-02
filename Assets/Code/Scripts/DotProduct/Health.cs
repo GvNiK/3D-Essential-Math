@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private Material m_Material;
+    [Header("Settings")]
     [SerializeField] private float m_HitEffectDuration = 0.1f;
     [SerializeField] private CameraShake m_CameraShake;
     [SerializeField] private float m_CmaeraShakeDuration = 0.25f;
@@ -13,13 +13,26 @@ public class Health : MonoBehaviour
     // the calculation might return very small positive or negative values.
     // This small margin of error accounts for floating-point precision issues and ensures that small values close to zero are considered zero for practical purposes.
     [SerializeField] private float m_Tolerance = 0.001f; // Small value for tolerance
-
+    [Space(20)]
+    
+    [Header(("Components"))]
+    [SerializeField] private Material m_Material;
+    [SerializeField] private Animator m_Animator;
+    
     private Color m_DefaultColor;
+    private int m_HitFront;
+    private int m_HitBack;
+    private int m_HitSide;
 
     private void Start()
     {
         if (m_Material == null) m_Material = GetComponent<Material>();
         if (m_Material != null) m_DefaultColor = m_Material.color;
+        if (m_Animator != null) m_Animator = GetComponent<Animator>();
+        
+        // Hash the parameter names once and store them
+        m_HitFront = Animator.StringToHash("HitFront");
+        m_HitBack = Animator.StringToHash("HitBack");
     }
 
     /// <summary>
@@ -44,6 +57,7 @@ public class Health : MonoBehaviour
                 // Hit Front
                 StopCoroutine(PlayHitEffect(Color.cyan));
                 StartCoroutine(PlayHitEffect(Color.cyan));
+                if(m_Animator != null) m_Animator.SetTrigger(m_HitFront);
                 Debug.Log("Hit at <color=cyan>Front</color>. DotProduct Value : " + "<color=green>" + dotProduct + "</color>");
             }
             else if (dotProduct < -m_Tolerance)
@@ -51,6 +65,7 @@ public class Health : MonoBehaviour
                 // Hit Back
                 StopCoroutine(PlayHitEffect(Color.red));
                 StartCoroutine(PlayHitEffect(Color.red));
+                if(m_Animator != null) m_Animator.SetTrigger(m_HitBack);
                 Debug.Log("Hit at <color=red>Back</color>. DotProduct Value : " + "<color=green>" + dotProduct + "</color>");
             }
             else
