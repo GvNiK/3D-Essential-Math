@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="aa3781a3-ebd2-40f4-b8bb-668c3b15212f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3D Essential Math/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D Essential Math/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Big Hit To Head.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Big Hit To Head.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Hit To Body.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Hit To Body.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Rib Hit.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Rib Hit.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animator/Demo.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animator/Demo.controller.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723166474223</updated>
       <workItem from="1723166500553" duration="5121000" />
-      <workItem from="1731633494885" duration="3937000" />
+      <workItem from="1731633494885" duration="6661000" />
     </task>
     <servers />
   </component>
