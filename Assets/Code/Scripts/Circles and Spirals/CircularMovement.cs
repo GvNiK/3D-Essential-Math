@@ -1,46 +1,65 @@
-using System;
-using UnityEditor;
 using UnityEngine;
 
 public class CircularMovement : MonoBehaviour
 {
-    [SerializeField] private float m_Segments = 50;
+    [SerializeField] private int m_Segments = 50;
     [SerializeField] private float m_Radius = 5;
-    [SerializeField] private GameObject m_ObjectToSpawn;
-    private float m_AngleStep;
+    [SerializeField] private float m_AngularSpeed = 90f;
+    [SerializeField] private float m_CurrentAngle = 0;
+    [SerializeField] private GameObject m_ObjectToRotate;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    private float m_AngleStep;
+    private Vector3 m_NewPosition;
+    
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
-        float x = 0;
-        float z = 0;
+        // Reset the angle value if it goes beyond 360 value.
+        // Increment the Angular Speed with the 
+        if (m_CurrentAngle > 360) m_CurrentAngle = 0;
+        else m_CurrentAngle += m_AngularSpeed * Time.deltaTime;
         
+        // Convert angle to radians for trigonometric calculations
+        float angleInRadians = m_CurrentAngle * Mathf.Deg2Rad;
+        
+        // Calculate the object's new position
+        float x = m_Radius * Mathf.Cos(angleInRadians);
+        float y = m_Radius * Mathf.Sin(angleInRadians);
+
+        m_NewPosition = new Vector3(x, m_ObjectToRotate.transform.position.y, y);
+        
+        if (m_ObjectToRotate != null) m_ObjectToRotate.transform.position = m_NewPosition;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        DrawCircle();
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(m_NewPosition, 0.25f);
+    }
+
+    private void DrawCircle()
+    {
+        if (m_Segments <= 0) return;
+
+        Gizmos.color = Color.blue;
         m_AngleStep = 360 / m_Segments;
 
         Vector3 lastPoint = transform.position + new Vector3(m_Radius, 0, 0);
 
         for (int i = 0; i <= m_Segments; i++)
         {
-            float angle = i * m_AngleStep;
-            x = m_Radius * Mathf.Cos(angle * Mathf.Deg2Rad);
-            z = m_Radius * Mathf.Sin(angle * Mathf.Deg2Rad);
+            float angle = i * m_AngleStep * Mathf.Deg2Rad;
+            float x = m_Radius * Mathf.Cos(angle);
+            float z = m_Radius * Mathf.Sin(angle);
             Vector3 nextPoint = transform.position + new Vector3(x, 0, z);
             Gizmos.DrawLine(lastPoint, nextPoint);
             lastPoint = nextPoint;
         }
+    }
 
-        if (m_ObjectToSpawn != null) Instantiate(m_ObjectToSpawn, new Vector3(x, 0, z), Quaternion.identity);
+    private void OnValidate()
+    {
+        if (m_Segments < 3) m_Segments = 3;
+        if (m_Radius <= 0) m_Radius = 1;
     }
 }

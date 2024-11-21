@@ -7,7 +7,8 @@ public class DotProductEditor : EditorWindow
     public Vector3 m_p0;
     public Vector3 m_p1;
     public Vector3 m_c;
-
+    
+    // To display the above properties in the Window (Inspector).
     private SerializedObject obj;
     private SerializedProperty propP0;
     private SerializedProperty propP1;
@@ -27,9 +28,10 @@ public class DotProductEditor : EditorWindow
         {
             m_p0 = new Vector3(0.0f, 1.0f, 0.0f);
             m_p1 = new Vector3(0.0f, 0.5f, 0.0f);
-            m_p0 = Vector3.zero;
+            m_c = Vector3.zero;
         }
         
+        // To Display the class properties in the Editor Window (Inspector).
         obj = new SerializedObject(this);
         propP0 = obj.FindProperty("m_p0");
         propP1 = obj.FindProperty("m_p1");
