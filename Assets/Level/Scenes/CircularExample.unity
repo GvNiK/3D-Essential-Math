@@ -353,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 564037762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.677514, y: -0.11800358, z: 5.0099654}
+  m_LocalPosition: {x: -3.8843067, y: 0, z: -0.084017284}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -422,12 +422,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Segments: 50
-  m_Radius: 10.019931
+  m_Radius: 3.885215
   m_RadiusStep: 0.5
   m_MaxRadiusValue: 10
   m_AngularSpeed: 90
-  m_CurrentAngle: 30
+  m_CurrentAngle: 181.2391
   m_ObjectToRotate: {fileID: 564037762}
+  m_Offset: {x: 3.75, y: 2, z: 0.08}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0

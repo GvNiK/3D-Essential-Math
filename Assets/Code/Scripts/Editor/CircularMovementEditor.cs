@@ -24,7 +24,7 @@ public class CircularMovementEditor : Editor
         };
 
         // Draw a button at a fixed position in the Scene View
-        Rect buttonRect = new Rect(10, 500, 150, 30); // Position and size of the button
+        Rect buttonRect = new Rect(Screen.width - 600, Screen.height - 100, 150, 30); // Position and size of the button
         if (GUI.Button(buttonRect, "Play", buttonStyle))
         {
             // Switch to View Tool
