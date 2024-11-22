@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="987226f4-3726-4e11-9fb6-fe052c3330dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.3D-Essential-Math/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D-Essential-Math/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Skin.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Skin.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Circles and Spirals/CircularMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Circles and Spirals/CircularMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Editor/DotProductEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Editor/DotProductEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level/Scenes/CircularExample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Scenes/CircularExample.unity" afterDir="false" />
-    </list>
+    <list default="true" id="987226f4-3726-4e11-9fb6-fe052c3330dc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +70,8 @@
       <workItem from="1724993548643" duration="8002000" />
       <workItem from="1725278883618" duration="1210000" />
       <workItem from="1731051709755" duration="2949000" />
-      <workItem from="1732183025567" duration="9021000" />
+      <workItem from="1732183025567" duration="9516000" />
+      <workItem from="1732253030026" duration="1392000" />
     </task>
     <servers />
   </component>

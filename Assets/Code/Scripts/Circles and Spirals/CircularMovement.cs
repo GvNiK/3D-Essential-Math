@@ -1,11 +1,16 @@
 using UnityEngine;
 
+/// <summary>
+/// Task : Circular Movement with Changing Radius
+/// Imagine you have a single object that you want to move in a circle, but the circle’s radius gradually increases over time.
+/// How would you update the object’s position frame by frame to achieve this effect?
+/// </summary>
 public class CircularMovement : MonoBehaviour
 {
     [SerializeField] private int m_Segments = 50;
     [SerializeField] private float m_Radius = 3;
     [SerializeField] private float m_RadiusStep = 0.5f;
-    [SerializeField] private float m_MaxRadiusValue = 20f;
+    [SerializeField] private float m_MaxRadiusValue = 10f;
     [SerializeField] private float m_AngularSpeed = 90f;
     [SerializeField] private float m_CurrentAngle = 0;
     [SerializeField] private GameObject m_ObjectToRotate;
@@ -16,8 +21,8 @@ public class CircularMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         // Increment Radius
-        // if (m_Radius != m_MaxRadiusValue) m_Radius += m_RadiusStep * Time.deltaTime;
-        // else m_Radius = m_DefaultRadius;
+        if (m_Radius < m_MaxRadiusValue) m_Radius += m_RadiusStep * Time.deltaTime;
+        else m_Radius = m_DefaultRadius;
         
         // Reset the angle value if it goes beyond 360 value.
         // Increment the Angular Speed with the 
