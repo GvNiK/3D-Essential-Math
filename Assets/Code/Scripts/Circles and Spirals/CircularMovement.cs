@@ -3,16 +3,22 @@ using UnityEngine;
 public class CircularMovement : MonoBehaviour
 {
     [SerializeField] private int m_Segments = 50;
-    [SerializeField] private float m_Radius = 5;
+    [SerializeField] private float m_Radius = 3;
+    [SerializeField] private float m_RadiusStep = 0.5f;
+    [SerializeField] private float m_MaxRadiusValue = 20f;
     [SerializeField] private float m_AngularSpeed = 90f;
     [SerializeField] private float m_CurrentAngle = 0;
     [SerializeField] private GameObject m_ObjectToRotate;
-    
     private float m_AngleStep;
     private Vector3 m_NewPosition;
+    private float m_DefaultRadius;
     
     private void OnDrawGizmos()
     {
+        // Increment Radius
+        // if (m_Radius != m_MaxRadiusValue) m_Radius += m_RadiusStep * Time.deltaTime;
+        // else m_Radius = m_DefaultRadius;
+        
         // Reset the angle value if it goes beyond 360 value.
         // Increment the Angular Speed with the 
         if (m_CurrentAngle > 360) m_CurrentAngle = 0;
@@ -57,9 +63,18 @@ public class CircularMovement : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        if (GUI.Button(new Rect(new Vector2(0, 0), new Vector2(100, 50)), "Play"))
+        {
+            Debug.Log("Focus Scene View.");
+        }
+    }
+
     private void OnValidate()
     {
         if (m_Segments < 3) m_Segments = 3;
         if (m_Radius <= 0) m_Radius = 1;
+        m_DefaultRadius = m_Radius;
     }
 }

@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aa3781a3-ebd2-40f4-b8bb-668c3b15212f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3D Essential Math/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D Essential Math/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Big Hit To Head.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Big Hit To Head.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Hit To Body.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Hit To Body.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Rib Hit.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Rib Hit.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animator/Demo.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animator/Demo.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Circles and Spirals/CircularMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Circles and Spirals/CircularMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Editor/CircularMovementEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Editor/CircularMovementEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Scenes/CircularExample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level/Scenes/CircularExample.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +74,9 @@
       <updated>1723166474223</updated>
       <workItem from="1723166500553" duration="5121000" />
       <workItem from="1731633494885" duration="6661000" />
+      <workItem from="1731812353508" duration="597000" />
+      <workItem from="1732202865013" duration="1463000" />
+      <workItem from="1732243911447" duration="330000" />
     </task>
     <servers />
   </component>
