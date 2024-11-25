@@ -17,3 +17,9 @@ This project focuses on understanding math with unity. It uses visualization to 
 
 ![Incrementing Radius with Offset](https://github.com/user-attachments/assets/6d3754e7-2d32-45c6-b112-ad18bd1d901d)
 - This is an example of an object moving in a circular movement with an offset. Offset object is highlighted using red color.
+
+![Place Objects in a Spiral](https://github.com/user-attachments/assets/b928231f-46c3-41ad-9998-44245805374a)
+- This is an example of spawning and rotationg objects in 3D space on different axes.
+
+![Staggered Pattern with Random Rotation](https://github.com/user-attachments/assets/0052362c-44b3-4fd8-880e-9b645081ac25)
+- This is an example of spawning objects in spiral with some options for tweaking.
