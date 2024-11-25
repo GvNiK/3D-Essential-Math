@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Circular : MonoBehaviour
 {
+    [Tooltip("Radius of the circle.")]
     [SerializeField] private float m_Radius = 5;
+    [Tooltip("Total number of objects.")]
     [SerializeField] private float m_NumberOfBalls = 10;
+    [Tooltip("GameObject to Spawn.")]
     [SerializeField] private GameObject m_ObjectToSpawn;
+    [Tooltip("Trigonometric approaches to execute the output.")]
     [SerializeField] private CircularMethod m_CircularMethod;
     private float m_AngleStep;
     private GameObject m_SpawnedGroup;

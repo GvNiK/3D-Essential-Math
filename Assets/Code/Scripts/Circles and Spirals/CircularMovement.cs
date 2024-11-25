@@ -7,13 +7,21 @@ using UnityEngine;
 /// </summary>
 public class CircularMovement : MonoBehaviour
 {
+    [Tooltip("Number of lines to draw.")]
     [SerializeField] private int m_Segments = 50;
+    [Tooltip("Initial radius of the circle.")]
     [SerializeField] private float m_Radius = 3;
+    [Tooltip("Radius growth per step.")]
     [SerializeField] private float m_RadiusStep = 0.5f;
+    [Tooltip("The maximum value to clamp or stop incrementing the radius. (The end point)")]
     [SerializeField] private float m_MaxRadiusValue = 10f;
+    [Tooltip("Rotation speed in degrees per second.")]
     [SerializeField] private float m_AngularSpeed = 90f;
+    [Tooltip("Tracks the angle.")]
     [SerializeField] private float m_CurrentAngle = 0;
+    [Tooltip("GameObject to Spawn and Rotate.")]
     [SerializeField] private GameObject m_ObjectToRotate;
+    [Tooltip("Offset from the circular path.")]
     [SerializeField] private Vector3 m_Offset;
     private float m_AngleStep;
     private Vector3 m_NewPosition;

@@ -3,11 +3,17 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
+    [Tooltip("Total number of objects.")]
     [SerializeField] private int m_TotalObjectCount = 10;
+    [Tooltip("Axis to position spawned objects.")]
     [SerializeField] private Axis m_PositionAxis;
+    [Tooltip("Randomize Angles rotations on which Axis?")]
     [SerializeField] private Axis m_RotationAxis;
+    [Tooltip("Position Offset from the base position.")]
     [SerializeField] private float m_Gap;
+    [Tooltip("Name of the parent object of the objects spawned.")]
     [SerializeField] private string m_ParentObjectName = "Spawner Parent";
+    [Tooltip("GameObject to Spawn.")]
     [SerializeField] private GameObject m_ObjectToSpawn;
     private float m_RotationOffset;
     private Transform m_Parent;
@@ -20,16 +26,7 @@ public class Spawner : MonoBehaviour
         GameObject existingParent = GameObject.Find(m_ParentObjectName);
         
         // If it does, then spawn all objects within that object. Else create a new one. 
-        if (existingParent != null)
-        {
-            // Use the existing parent
-            m_Parent = existingParent.transform;
-        }
-        else
-        {
-            // Create a new parent GameObject
-            m_Parent = new GameObject(m_ParentObjectName).transform;
-        }
+        m_Parent = existingParent != null ? existingParent.transform : new GameObject(m_ParentObjectName).transform;
         
         float positionOffset  = 0;
             
